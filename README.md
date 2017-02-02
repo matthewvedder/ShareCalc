@@ -1,7 +1,8 @@
-# React + Node Starter (for [Heroku](https://www.heroku.com/) deployment)
+# A Caculator Using Web Sockets
 
 ### CHECK IT OUT IN PRODUCTION AT:
 * https://protected-journey-34405.herokuapp.com/
+* Open two tabs and try it out!
 
 ### UP & RUNNING
 * `npm install`
