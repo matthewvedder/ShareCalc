@@ -52,8 +52,8 @@ const App = React.createClass({
   },
   render: function() {
     return (
-      <div>
-        <div className="App">
+      <div className="App">
+        <div className="Calculator">
           <Display data={this.state.operations} />
           <Buttons>
             <Button onClick={this.handleClick} label="C" value="clear" />
@@ -79,7 +79,8 @@ const App = React.createClass({
             <Button onClick={this.handleClick} label="=" size="2" value="equal" />
           </Buttons>
         </div>
-      <Calculations mapList={this.mapList} calculations={this.state.calculations} />
+
+        <Calculations mapList={this.mapList} calculations={this.state.calculations} />
     </div>
     );
   }
@@ -112,9 +113,12 @@ function Button (props) {
 
 function Calculations ({ mapList, calculations }) {
   return (
-    <ul>
-      { mapList(calculations) }
-    </ul>
+    <div className="Calculations">
+      <h2>Calculations</h2>
+      <ul>
+        { mapList(calculations) }
+      </ul>
+    </div>
   )
 }
 
