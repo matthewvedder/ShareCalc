@@ -20,8 +20,11 @@ const App = React.createClass({
     })
   },
   mapList(array) {
+    const length = array.length
+    const reducedArray = length > 10 ? array.slice(length - 10, length) : array
+
     return (
-      array.map((message, i) => {
+      reducedArray.map((message, i) => {
         return <p key={i}>{message}</p>
       })
     )
@@ -115,9 +118,9 @@ function Calculations ({ mapList, calculations }) {
   return (
     <div className="Calculations">
       <h2>Calculations</h2>
-      <ul>
+      <div>
         { mapList(calculations) }
-      </ul>
+      </div>
     </div>
   )
 }
